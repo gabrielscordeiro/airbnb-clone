@@ -15,6 +15,7 @@ import {
 import useRegisterModel from "@/app/hooks/useRegisterModel";
 import Modal from "@/app/components/modals/Modal";
 import Heading from "@/app/components/Heading";
+import Input from "@/app/components/inputs/Input";
 const RegisterModal = () => {
     const registerModel = useRegisterModel();
     const [isLoading, setIsLoading] = useState(false);
@@ -49,10 +50,38 @@ const RegisterModal = () => {
     }
 
     const bodyContent = (
-        <div className="flex flex-col gap=4">
+        <div className="flex flex-col gap-4">
             <Heading
                 title="Welcome to Airbnb"
                 subTitle="Create an account!"
+            />
+
+            <Input
+                id="email"
+                label="E-mail"
+                disabled={isLoading}
+                register={register}
+                errors={errors}
+                required
+            />
+
+            <Input
+                id="name"
+                label="Name"
+                disabled={isLoading}
+                register={register}
+                errors={errors}
+                required
+            />
+
+            <Input
+                id="password"
+                type="password"
+                label="Password"
+                disabled={isLoading}
+                register={register}
+                errors={errors}
+                required
             />
         </div>
     )
