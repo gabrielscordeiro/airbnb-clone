@@ -44,6 +44,7 @@ const RegisterModal = () => {
                 registerModel.onClose();
             })
             .catch((error) => {
+                console.log(error)
                 toast.error('Someting went wrong!');
             })
             .finally(() => {
