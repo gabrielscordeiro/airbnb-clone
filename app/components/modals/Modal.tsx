@@ -1,7 +1,7 @@
 'use client';
 
-import {useCallback, useEffect, useState} from "react";
-import {IoMdClose} from "react-icons/io";
+import { useCallback, useEffect, useState } from "react";
+import { IoMdClose } from "react-icons/io";
 import Button from "@/app/components/Button";
 
 interface ModalProps {
