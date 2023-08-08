@@ -41,12 +41,10 @@ const Modal:React.FC<ModalProps> = ({
         }
 
         setShowModal(false);
-
         setTimeout(() => {
-            onClose()
-        }, 300)
-
-    }, [disabled, onClose]);
+            onClose();
+        }, 300);
+    }, [onClose, disabled]);
 
     const handleSubmit = useCallback(() => {
         if(disabled) {
@@ -75,7 +73,7 @@ const Modal:React.FC<ModalProps> = ({
                     {/*  CONTENT  */}
                     <div className={`
                         translate 
-                        direction-300 
+                        duration-300 
                         h-full 
                         ${showModal ? 'translate-y-0' : 'translate-y-full'}
                         ${showModal ? 'opacity-100' : 'opacity-0'}
@@ -84,7 +82,7 @@ const Modal:React.FC<ModalProps> = ({
                             {/*  HEADER  */}
                             <div className="relative flex items-center justify-center p-6 rounded-t border-b-[1px]">
                                 <button
-                                    className="absolute left-9 p-1 border-0 hover:opacity-70 transition"
+                                    className="absolute right-9 p-1 border-0 hover:opacity-70 transition"
                                     onClick={handleClose}
                                 >
                                     <IoMdClose size={18} />
