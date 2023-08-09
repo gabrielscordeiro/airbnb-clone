@@ -113,7 +113,7 @@ const RentModal = () => {
               />
 
               <CountrySelect
-
+                onChange={()=>{}}
               />
           </div>
         );
