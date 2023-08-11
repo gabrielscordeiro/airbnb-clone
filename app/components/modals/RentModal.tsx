@@ -7,8 +7,9 @@ import Heading from "@/app/components/Heading";
 import CategoryInput from "@/app/components/inputs/CategoryInput";
 import useRentModal from "@/app/hooks/useRentModal";
 import { categories } from "@/app/components/navbar/Categories";
-import {FieldValues, useForm} from "react-hook-form";
+import { FieldValues, useForm } from "react-hook-form";
 import CountrySelect from "@/app/components/inputs/CountrySelect";
+import Map from "@/app/components/Map";
 
 enum STEPS {
     CATEGORY = 0,
@@ -46,6 +47,7 @@ const RentModal = () => {
     });
 
     const category = watch('category');
+    const location = watch('location');
 
     const setCustomValue = (id:string, value:any) => {
         setValue(id, value, {
@@ -108,13 +110,16 @@ const RentModal = () => {
         bodyContent = (
           <div className="flex flex-col gap-8">
               <Heading
-                  title="Where is your place located?"
-                  subTitle="Help guests find you!"
+                title="Where is your place located?"
+                subTitle="Help guests find you!"
               />
 
               <CountrySelect
-                onChange={()=>{}}
-              />
+                value={location}
+                onChange={(value)=> { setCustomValue('location', value) }}
+            />
+
+              <Map />
           </div>
         );
     }
