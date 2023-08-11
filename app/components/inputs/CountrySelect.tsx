@@ -20,7 +20,7 @@ const CountrySelect = ({ value, onChange }: CountrySelectProps) => {
     const { getAll } = useCountries();
 
     return (
-        <div>
+        <div className="z-10">
             <Select
                 placeholder="Anywhere"
                 isClearable

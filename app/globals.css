@@ -7,3 +7,10 @@ body,
 :root {
     height: 100%;
 }
+
+.leafleft-bottom,
+.leafleft-control,
+.leafleft-pane,
+.leafleft-top {
+    z-index: 0 !important;
+}
