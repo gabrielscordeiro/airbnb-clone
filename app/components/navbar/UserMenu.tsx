@@ -3,7 +3,7 @@
 import { AiOutlineMenu } from "react-icons/ai";
 
 import useRegisterModal from "@/app/hooks/useRegisterModal";
-import useLoginModal from "@/app/hooks/useLoginModel";
+import useLoginModal from "@/app/hooks/useLoginModal";
 import useRentModal from "@/app/hooks/useRentModal";
 
 import Avatar from '../Avatar'

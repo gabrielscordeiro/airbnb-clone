@@ -6,7 +6,7 @@ import { useRouter } from "next/navigation";
 import { format } from  "date-fns"
 import React, { useCallback, useMemo } from "react";
 
-import useCountries from "@/app/hooks/UseCountries";
+import useCountries from "@/app/hooks/useCountries";
 import Image from "next/image";
 import HeartButton from "@/app/components/HeartButton";
 import Button from "@/app/components/Button";

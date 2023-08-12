@@ -1,7 +1,7 @@
 'use client';
 
 import Select from 'react-select';
-import useCountries from "@/app/hooks/UseCountries";
+import useCountries from "@/app/hooks/useCountries";
 
 export type CountrySelectValue = {
     flag: string;

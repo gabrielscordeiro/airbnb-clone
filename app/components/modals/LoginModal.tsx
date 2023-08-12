@@ -19,7 +19,7 @@ import Heading from "@/app/components/Heading";
 import Input from "@/app/components/inputs/Input";
 import toast from "react-hot-toast";
 import Button from "@/app/components/Button";
-import useLoginModal from "@/app/hooks/useLoginModel";
+import useLoginModal from "@/app/hooks/useLoginModal";
 const LoginModal = () => {
     const router = useRouter();
 
