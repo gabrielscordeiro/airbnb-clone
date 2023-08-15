@@ -14,3 +14,12 @@ body,
 .leafleft-top {
     z-index: 0 !important;
 }
+
+.rdrMonth,
+.rdrCalendarWrapper {
+    width: 100% !important;
+}
+
+.rdrCalendarWrapper {
+    font-size: 16px !important;
+}
