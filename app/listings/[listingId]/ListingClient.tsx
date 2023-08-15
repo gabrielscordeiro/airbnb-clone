@@ -3,6 +3,7 @@
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { differenceInCalendarDays, eachDayOfInterval } from "date-fns";
 import { useRouter } from "next/navigation";
+import { Range } from "react-date-range";
 import { Listing, Reservation} from "@prisma/client";
 import { SafeUser } from "@/app/types";
 import { categories } from "@/app/components/navbar/Categories";
@@ -55,7 +56,7 @@ const ListingClient = ({
 
     const [isLoading, setIsLoading] = useState(false);
     const [totalPrice, setTotalPrice] = useState(listing.price);
-    const [dateRange, setDateRange] = useState(initialDateRange);
+    const [dateRange, setDateRange] = useState<Range>(initialDateRange);
 
     const onCreateReservation = useCallback(() => {
         if(!currentUser){
