@@ -13,7 +13,7 @@ export type SafeReservation = Omit<Reservation, "createdAt" | "startDate" | "end
 }
 
 export type SafeUser = Omit<User, "createdAt" | "updatedAt" | "emailVerified"> & {
-    createdAt: string;
-    updatedAt: string;
+    createdAt: string | undefined;
+    updatedAt: string | undefined;
     emailVerified: string | null;
 };
