@@ -7,6 +7,7 @@ interface FavoritesClientProps {
     listings: SafeListing[];
     currentUser?: SafeUser | null;
 }
+
 const FavoritesClient = ({
  listings,
  currentUser
